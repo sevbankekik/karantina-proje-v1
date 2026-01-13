@@ -1,0 +1,42 @@
+{
+  "id": "4d844da4b596e98e",
+  "timestamp": "2026-01-12T17:52:18.492498",
+  "filename": "Yeni Metin Belgesi.txt",
+  "file_hash": "4d844da4b596e98e91a6d9b36cd3fad5544ae6c95aedf3b590f9800beb93d784",
+  "risk_score": 0,
+  "risk_level": "low",
+  "analysis_results": {
+    "static_analysis": {
+      "hashes": {
+        "md5": "0f1c89b6fafa86aea5a615255c39db31",
+        "sha1": "ea56e25d58831594aa42f08c84d8012c7c446091",
+        "sha256": "4d844da4b596e98e91a6d9b36cd3fad5544ae6c95aedf3b590f9800beb93d784",
+        "sha512": "8d29de4160649e80fe566856a183ce69ca71ef6010ed26e69f87df878dad99a4a3e3bc2bed9442a7f0f7add057eb73d4dee20e6092e23f999c54817a8e81da06"
+      },
+      "file_type": {
+        "mime_type": "application/octet-stream",
+        "description": "unknown",
+        "extension": ".txt"
+      },
+      "file_size": 218,
+      "entropy": 4.62,
+      "strings": [
+        "sudo apt update && sudo apt upgrade -y",
+        "sudo apt install git python3 python3-pip -y",
+        "pip3 install colorama requests",
+        "git clone https://github.com/tingirifistik/Enough-Reborn.git",
+        "cd Enough-Reborn",
+        "python3 enough.py"
+      ],
+      "pe_analysis": null,
+      "elf_analysis": null
+    },
+    "dynamic_analysis": {
+      "executed": false,
+      "error": "Docker not available for dynamic analysis"
+    },
+    "docker_available": false,
+    "analysis_timestamp": "2026-01-12T17:52:18.492498"
+  },
+  "status": "analyzed"
+}

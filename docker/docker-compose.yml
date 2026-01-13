@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  sandbox:
+    build:
+      context: .
+      dockerfile: Dockerfile.sandbox
+    container_name: malware_sandbox
+    network_mode: "none"  # İzole network - sadece localhost
+    read_only: true  # Read-only filesystem
+    tmpfs:
+      - /tmp:noexec,nosuid,size=100m
+      - /var/tmp:noexec,nosuid,size=100m
+    security_opt:
+      - no-new-privileges:true
+      - seccomp=unconfined  # Analiz için gerekli
+    cap_drop:
+      - ALL
+    cap_add:
+      - SYS_PTRACE  # strace için
+      - NET_RAW  # network monitoring için
+    mem_limit: 512m
+    cpus: 1
+    volumes:
+      - ./sandbox:/sandbox/input:ro
+      - ./reports:/sandbox/output:rw
+    environment:
+      - SANDBOX_TIMEOUT=60
+      - SANDBOX_MEMORY_LIMIT=512m
+    restart: "no"
+    stdin_open: false
+    tty: false
+

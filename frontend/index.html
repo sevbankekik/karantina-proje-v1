@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijital Karantina - Güvenli Dosya Analizi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ Dijital Karantina</h1>
+            <p class="subtitle">Şüpheli dosya, URL ve görsel analizi için güvenli sandbox ortamı</p>
+        </header>
+
+        <main>
+            <div class="cards-grid">
+                <!-- Dosya Analizi Kartı -->
+                <div class="analysis-card" id="file-card">
+                    <div class="card-header">
+                        <div class="card-icon">📄</div>
+                        <h2>Dosya Analizi</h2>
+                    </div>
+                    <p class="card-description">
+                        Şüpheli dosyaları güvenli sandbox ortamında analiz edin. 
+                        Zararlı yazılım tespiti ve davranış analizi yapılır.
+                    </p>
+                    <div class="card-input-area">
+                        <div class="upload-area" id="file-upload-area">
+                            <div class="upload-icon">📁</div>
+                            <p class="upload-text">Dosyayı buraya sürükleyin veya tıklayın</p>
+                            <p class="upload-hint">Maksimum dosya boyutu: 100 MB</p>
+                            <input type="file" id="file-input" class="file-input" multiple>
+                        </div>
+                        <div class="file-list" id="file-list"></div>
+                    </div>
+                </div>
+
+                <!-- URL Analizi Kartı -->
+                <div class="analysis-card" id="url-card">
+                    <div class="card-header">
+                        <div class="card-icon">🔗</div>
+                        <h2>URL Analizi</h2>
+                    </div>
+                    <p class="card-description">
+                        Şüpheli web adreslerini analiz edin. 
+                        Phishing, zararlı içerik ve güvenlik tehditleri tespit edilir.
+                    </p>
+                    <div class="card-input-area">
+                        <label for="url-input" class="input-label">Analiz edilecek URL</label>
+                        <input type="url" id="url-input" class="url-input" placeholder="https://example.com">
+                        <p class="input-hint">Şüpheli URL'yi buraya girin</p>
+                    </div>
+                </div>
+
+                <!-- Fotoğraf Analizi Kartı -->
+                <div class="analysis-card" id="image-card">
+                    <div class="card-header">
+                        <div class="card-icon">🖼️</div>
+                        <h2>Fotoğraf Analizi</h2>
+                    </div>
+                    <p class="card-description">
+                        Görselleri analiz edin. EXIF verileri, gizli içerik 
+                        ve manipülasyon tespiti yapılır.
+                    </p>
+                    <div class="card-input-area">
+                        <div class="upload-area" id="image-upload-area">
+                            <div class="upload-icon">📷</div>
+                            <p class="upload-text">Görseli buraya sürükleyin veya tıklayın</p>
+                            <p class="upload-hint">Desteklenen formatlar: JPG, PNG, GIF, WEBP</p>
+                            <input type="file" id="image-input" class="file-input" accept="image/*">
+                        </div>
+                        <div class="image-preview" id="image-preview"></div>
+                        <div id="exifInfo" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analiz Başlat Butonu -->
+            <div class="action-section">
+                <button class="analyze-button" id="analyze-button">
+                    <span class="button-icon">🔍</span>
+                    <span class="button-text">Analizi Başlat</span>
+                </button>
+            </div>
+
+            <!-- Sonuçlar Bölümü (Başlangıçta gizli) -->
+            <div class="results-section" id="results-section" style="display: none;">
+                <h2>Analiz Sonuçları</h2>
+                <div class="results-content" id="results-content">
+                    <!-- Sonuçlar buraya eklenecek -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Dijital Karantina. Güvenli analiz için tasarlandı.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/exif-js@2.3.0/exif.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+
