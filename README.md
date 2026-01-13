@@ -1,44 +1,43 @@
-🛡️ Dijital Karantina (Digital Quarantine)
+Dijital Karantina (Digital Quarantine)
+Dijital Karantina, şüpheli URL’leri, web içeriklerini ve dosyaları izole bir ortamda derinlemesine analiz etmek amacıyla geliştirilmiş, çok katmanlı bir siber güvenlik analiz platformudur. Bu proje; potansiyel tehditlerin kullanıcı sistemine ulaşmadan, güvenli bir "sandbox" (kum havuzu) içerisinde davranışsal, içerik bazlı ve görsel olarak incelenmesini sağlar.
 
-**Dijital Karantina**, şüpheli URL’leri ve web içeriklerini izole bir ortamda analiz etmek amacıyla geliştirilmiş,
-eğitim ve güvenlik odaklı bir **siber güvenlik analiz projesidir**.
+🎯 Projenin Amacı
+İzole Analiz: Şüpheli yapıları yerel sisteme zarar vermeyecek bir karantina ortamında çalıştırmak.
 
-Bu proje, potansiyel olarak zararlı web sitelerinin doğrudan kullanıcı sistemine temas etmeden
-davranışsal ve içerik bazlı olarak incelenmesini hedefler.
+Görsel ve Dosya Denetimi: Sadece URL değil, dosya yapısı ve sayfa görünümü üzerinden zararlı faaliyet tespiti yapmak.
 
----
+Erken Teşhis: Kimlik avı (phishing) ve malware dağıtan içerikleri erken aşamada belirlemek.
 
-## 🎯 Projenin Amacı
+Eğitim Altyapısı: Siber güvenlik öğrencileri ve meraklıları için güvenli bir pratik sahası oluşturmak.
 
-- Şüpheli URL’leri güvenli bir **karantina ortamında** çalıştırmak
-- Web sayfası davranışlarını **izole şekilde gözlemlemek**
-- Zararlı olabilecek içerikleri **erken aşamada tespit etmek**
-- Siber güvenlik eğitimi ve farkındalığına katkı sağlamak
+🔍 Temel Özellikler
+🌐 URL & Web Karantinası: Şüpheli linklerin headless tarayıcılar üzerinden güvenli izolasyonu.
 
----
+🖼️ Görsel Analiz: Sayfa ekran görüntüleri ve DOM yapısı üzerinden görsel inceleme (Phishing tespiti için).
 
-## 🔍 Temel Özellikler
+📂 Dosya Analiz Modülü: Şüpheli dosyaların içeriğini ve davranışlarını izole ortamda tarama.
 
-- 🔒 **URL Karantina Sistemi**
-- 🌐 **Headless tarayıcı (izole web inceleme)**
-- 👁️ **Sayfa davranışı ve içerik gözlemi**
-- 🧪 **Eğitim ve simülasyon amaçlı analiz altyapısı**
-- 📊 **Geliştirilmeye açık modüler yapı**
+👁️ Davranışsal Gözlem: Web sayfalarının arka planda yürüttüğü scriptlerin ve yönlendirmelerin takibi.
 
----
+🖥️ Kullanıcı Dostu Arayüz: Analiz süreçlerini yönetmeyi ve raporları izlemeyi kolaylaştıran modern Frontend paneli.
 
-## 🧠 Kullanım Senaryoları
+🧠 Kullanım Senaryoları
+Siber Güvenlik Eğitimi: Öğrencilerin zararlı yazılım davranışlarını canlı ve güvenli bir ortamda gözlemlemesi.
 
-- Siber güvenlik öğrencileri için pratik analiz ortamı
-- Şüpheli linklerin manuel olarak incelenmesi
-- Eğitim, demo ve test amaçlı güvenlik simülasyonları
-- Zararlı içerik davranışlarının gözlemlenmesi
+Olay Müdahale (Incident Response): Şüpheli link veya dosyaların manuel/otomatik ilk incelemesinin yapılması.
 
----
+Güvenlik Simülasyonları: Kurumsal eğitimlerde zararlı içeriklerin nasıl çalıştığının demo edilmesi.
 
-## 🧰 Kullanılan Teknolojiler
+🧰 Kullanılan Teknolojiler
+Proje, hem arka uçta güçlü bir analiz motoru hem de ön uçta kullanıcı etkileşimini sağlayan modern bir teknoloji yığını üzerine inşa edilmiştir:
 
-- **Python**
-- **Playwright (Headless Chromium)**
-- **Web teknolojileri (Frontend varsa: HTML / CSS / JS)**
-- İzole çalışma prensipleri
+Backend: Python (Analiz motoru ve mantıksal katman)
+
+Tarayıcı Otomasyonu: Playwright / Headless Chromium (İzole web inceleme)
+
+Frontend: HTML5, CSS3 ve JavaScript (Kullanıcı arayüzü ve veri görselleştirme)
+
+Analiz Araçları: Görsel işleme ve dosya imza kontrol kütüphaneleri.
+
+🚀 Gelecek Vizyonu
+Proje, modüler yapısı sayesinde yeni nesil yapay zeka tabanlı tehdit algılama modellerinin entegre edilmesine ve daha geniş çaplı ağ trafiği analizlerine olanak tanıyacak şekilde geliştirilmeye devam etmektedir.
